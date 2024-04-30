@@ -1,7 +1,5 @@
 # Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+
 
 trigger:
 - main
@@ -15,12 +13,16 @@ steps:
 
 # Delay v1
 # Delay further execution of a workflow by a fixed time.
-- task: Delay@1
+- task: PowerShell@2
   inputs:
-    delayForMinutes: '0' # string. Required. Delay Time (minutes). Default: 0.
-
-- script: echo Hello, world!
-  displayName: 'Run a two-line script'
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Hello World"
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
 
 - script: |
