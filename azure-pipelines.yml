@@ -6,13 +6,12 @@ trigger:
 
 pool: 
   vmImage: ubuntu-latest
+variables:
+- group: VeracodeScanning  
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
-variables:
-- group: VeracodeScanning
 
 # Delay v1
 # Delay further execution of a workflow by a fixed time
