@@ -11,7 +11,7 @@ variables:
 
 steps:
 - script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  displayName: 'Run a one-line script original'
 
 # Delay v1
 # Delay further execution of a workflow by a fixed time
