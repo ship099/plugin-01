@@ -87,3 +87,4 @@ let scaResult = {
 // let policyFile = "";
 // scaReport = (0, sca_scan_results_1.processSCAResults)(policyFile);
 // console.log("scaReport",scaReport)
+console.log("testing the pull request")
