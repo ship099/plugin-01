@@ -1,31 +1,18 @@
 # Starter pipeline
 
 trigger:
-  - main
+  - "*"
+
+pr:
+  branches:
+    include:
+      - "*"
 
 pool:
-  vmImage: ubuntu-latest
-variables:
-  - group: VeracodeScanning
+  vmImage: "ubuntu-latest"
 
 steps:
-  - script: echo Hello, world!
-    displayName: "Run a one-line script original"
-
-  # Delay v1
-  # Delay further execution of a workflow by a fixed time
-  - task: PowerShell@2
-    inputs:
-      targetType: "inline"
-      script: |
-        # Write your PowerShell commands here.
-
-        Write-Host "Hello World"
-  # Start with a minimal pipeline that you can customize to build and deploy your code.
-  # Add steps that build, run tests, deploy, and more:
-  # https://aka.ms/yaml
-
   - script: |
-      echo Add other tasks to build, test, and deploy your project.
-      echo See https://aka.ms/yaml
-    displayName: "Run a multi-line script"
+      echo "This pipeline was triggered by a pull request."
+      ls /home/vsts/work/1/s
+    displayName: "List Directory"

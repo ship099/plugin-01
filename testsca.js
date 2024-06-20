@@ -82,7 +82,7 @@ let scaResult = {
 
     
 
-    console.log("scarEsult",scaResult)
+    console.log("scarResult",scaResult)
 // let scaReport;
 // let policyFile = "";
 // scaReport = (0, sca_scan_results_1.processSCAResults)(policyFile);
