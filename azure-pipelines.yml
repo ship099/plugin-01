@@ -14,6 +14,6 @@ pool:
 
 steps:
 - script: |
-    echo "This pipeline was triggered by a pull\\."
+    echo "This pipeline was triggered by a pull."
     ls /home/vsts/work/1/s
   displayName: 'List Directory'
