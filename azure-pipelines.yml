@@ -15,5 +15,10 @@ pool:
 steps:
 - script: |
     echo "This pipeline was triggered by a pull"
+    echo "the pwd is"
+    pwd
+    ls
+    echo "after ls command"
     ls /home/vsts/work/1/s
+
   displayName: 'List Directory'
