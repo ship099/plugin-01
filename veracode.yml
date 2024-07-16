@@ -52,7 +52,7 @@ veracode_sca_scan:
   push:
     trigger: true
     branches_to_run:
-      - '*'
+      - 'testbranch'
     branches_to_exclude:
   pull_request:
     trigger: true
