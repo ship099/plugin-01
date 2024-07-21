@@ -1,5 +1,4 @@
 # Starter pipeline
-#  hvh
  
 trigger:
   - "*"
