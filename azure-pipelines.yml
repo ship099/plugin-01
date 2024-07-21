@@ -1,5 +1,5 @@
 # Starter pipeline 
-#trigger commen
+#trigger comment
  
 trigger:
   - "*"
