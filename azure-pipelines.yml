@@ -11,6 +11,9 @@ pr:
 pool:
   vmImage: "ubuntu-latest"
 
+variables:
+  system.debug: true
+
 steps:
   - script: |
       echo "This pipeline was triggered by a pull request."
