@@ -1,6 +1,6 @@
-# Starter pipeline
-#  
-
+# Starter pipeline 
+#trigger comment
+ 
 trigger:
   - "*"
 
@@ -11,6 +11,9 @@ pr:
 
 pool:
   vmImage: "ubuntu-latest"
+
+variables:
+  system.debug: true
 
 steps:
   - script: |
