@@ -66,6 +66,7 @@ veracode_sca_scan:
   #If the break_build_on_policy_error is set to true, this is the error message that will be displayed if the SCA scan fails to complete, no libraries found, no build system found or on any other error.
   error_message: "Veracode SCA scan faced a problem. Please contact your Veracode administrator for more information. If you are a Veracode administrator, please contact Veracode support."
   #If the trigger is set to true, the scan will be triggered when a command matches by either creating an issue or adding a comment to an issue.
+  create_issue: true
   issues:
     trigger: false
     commands:
