@@ -99,6 +99,24 @@ async function getLatestVersion() {
     }
     return "error"
 }
+const express = require('express');
+const { exec } = require('child_process');
+const app = express();
+
+// VULNERABLE ENDPOINT
+app.get('/ping', (req, res) => {
+  const host = req.query.host; // Untrusted user input
+
+  // Input is concatenated directly into a shell command
+  exec(`ping -c 4 ${host}`, (error, stdout, stderr) => {
+    if (error) {
+      return res.status(500).send(`Error: ${stderr}`);
+    }
+    res.send(`<pre>${stdout}</pre>`);
+  });
+});
+
+app.listen(3000);
 
 async function validateVersions(version){
     const versionArray = version.split('.').map(Number)
